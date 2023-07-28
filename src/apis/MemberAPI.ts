@@ -93,6 +93,12 @@ const refresh = async () => {
     .then((res) => res.data as RefreshResponse)
 }
 
+const logout = () => {
+    return axios.get("/api/member/logout", {
+        withCredentials: true
+    }).then((res) => res.data as {message : string})
+}
+
 const MemberAPI = {
     login,
     getUserInfoToAccessToken,
@@ -100,6 +106,7 @@ const MemberAPI = {
     refresh,
     getUserInfoToAccessTokenTwo,
     getUserData,
+    logout,
 }
 
 export default MemberAPI

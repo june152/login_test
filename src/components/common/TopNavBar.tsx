@@ -25,7 +25,10 @@ const TopNavBar = ({
   onTabChange: (tab: TopNavTab) => void;
 }): JSX.Element => {
   const navigate = useNavigate();
-  const { member } = useMember()
+  const { member, getMemberData } = useMember()
+  useEffect(() => {
+    getMemberData()
+  }, [])
   
     // 모든 탭을 배열로 선언
     const tabs: TopNavTab[] = member ? [

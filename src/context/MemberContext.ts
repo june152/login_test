@@ -3,10 +3,12 @@ import Member from '../models/Member';
 
 interface MemberState {
     member?: Member,
+    getMemberData: () => any,
     logOut: () => any
 }
 
 const initialState: MemberState = {
+    getMemberData() {},
     logOut() {},
 }
 

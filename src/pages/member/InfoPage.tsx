@@ -9,13 +9,16 @@ const NAVER = "네이버"
 const GOOGLE = "구글"
 
 const InfoPage = () => {
-    const {member} = useMember()
+    const {member, getMemberData} = useMember()
     const navigate = useNavigate()
     const [snsType, setSnsType] = useState("없음")
+    useEffect(() => {
+        getMemberData()
+    }, [])
     
     if (!member) {
-        window.alert("로그인이 필요합니다.")
-        navigate("/login")
+        window.alert("로그인이 필요합니다!!")
+        return <Navigate to="/login" />
     }
 
     return (
