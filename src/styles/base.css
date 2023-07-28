@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* 프리텐다드 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+/* 노토산스 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+
+
+html, body{width: 100%; height: 100%;}
+
+/* common */
+*{margin: 0; padding: 0;font-family: 'Pretendard', sans-serif; box-sizing: border-box;}
+html,body,div,span,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,blockquote,p,a,address,pre,cite,form,fieldset,table,th,td,legend,label,button{margin:0;padding:0;border:0;font-size:15px;font-family:'Pretendard', sans-serif; color: #000;}
+input,textarea,select{margin:0;padding:0;  font-family:'Pretendard', sans-serif;}
+
+input,textarea{-webkit-appearance: none !important;}
+select::-ms-expand {display:none;}
+
+a, button {cursor:pointer;}
+a, a:link{text-decoration:none;}
+
+body{line-height:120%;color:#222;letter-spacing:-.04em;-webkit-text-size-adjust:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+h1,h2,h3,h4,h5,h6,p{line-height:1.3em}
+fieldset,img,abbr,acronym,label{border:0 none;}
+ol,ul,dl{list-style:none;}
+hr{display:none;}
+fieldset{border:0}
+label,select,input,textarea{vertical-align:middle}
+
+.notext {display: none;}
+.cf::after {content: ''; clear: both; display: block;}
+
+.txt_cut1,.txt_cut2,.txt_cut3,.txt_cut4,.txt_cut5{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;}
+.txt_cut1{-webkit-line-clamp:1; white-space: nowrap;/* 라인수 */ height: 1.3em; display: block;}
+.txt_cut2{-webkit-line-clamp:2;/* 라인수 */ height: 2.6em;}
+.txt_cut3{-webkit-line-clamp:3;/* 라인수 */ height: 3.9em;}
+.txt_cut4{-webkit-line-clamp:4;/* 라인수 */ height: 5.2em;}
+.txt_cut5{-webkit-line-clamp:5;/* 라인수 */ height: 6.5em;}
+
+select, input{outline: none;}
+
+/* 페이징 형식 */
+
+/* 1~5
+    <div id="" class="">
+        <p>
+            <span class="numPN m_ar"><a href="#" data-page="1" title="처음 페이지로 이동하기"><img src="image/ic_prev2.png" alt="처음 페이지"></a></span>
+            <span class="numPN over left"><a href="#" data-page="1" title="이전 페이지로 이동하기"><img src="image/ic_prev.png" alt="이전 페이지"></a></span>
+            <span class="Present"><a class="on" href="#" data-page="1">1</a></span>
+            <span><a href="#" data-page="2">2</a></span>
+            <span><a href="#" data-page="3">3</a></span>
+            <span><a href="#" data-page="4">4</a></span>
+            <span><a href="#" data-page="5">5</a></span>
+            <span class="numPN  over right"><a href="#" data-page="11" title="다음 페이지로 이동하기"><img src="image/ic_next.png" alt="다음 페이지"></a></span>
+            <span class="numPN m_ar"><a href="#" data-page="14" title="마지막 페이지로 이동하기"><img src="image/ic_next2.png" alt="마지막 페이지"></a></span>
+        </p>
+    </div>
+*/
+
+
+/* 페이징 */
+#paging{clear: both; margin: 0 auto; text-align: center; position: relative;}
+#paging p{display: flex; align-items: center; justify-content: center;}
+#paging p span a{display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; line-height: 30px; margin: 0 2px; font-size: 15px; color: #000; font-weight: 400; text-decoration: none; transition: all .2s;}
+#paging p span:first-child a{margin-left: 0;}
+#paging p span a:hover{color: #5b73d8;}
+#paging .numPN a{width: 24px; height: 30px;}
+#paging .numPN a img{width: 10px; height: 10px;}
+#paging .Present a{color: #5b73d8; font-weight: 700;}
+
+
+/* 페이징 */
+.paging{clear: both; margin: 0 auto; text-align: center; position: relative;}
+.paging p{display: flex; align-items: center; justify-content: center;}
+.paging p span a{display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; line-height: 30px; margin: 0 2px; font-size: 15px; color: #000; font-weight: 400; text-decoration: none; transition: all .2s;}
+.paging p span:first-child a{margin-left: 0;}
+.paging p span a:hover{color: #5b73d8;}
+.paging .numPN a{width: 24px; height: 30px;}
+.paging .numPN a img{width: 10px; height: 10px;}
+.paging .Present a{color: #5b73d8; font-weight: 700;}
+
+/*ie용 스크롤 바*/
+html{
+    scrollbar-arrow-color: none;
+    scrollbar-Track-Color: #eeeeee; 
+    scrollbar-base-color: #ddd;
+    scrollbar-Face-Color: #ddd;
+    scrollbar-3dLight-Color: none;         
+    scrollbar-DarkShadow-Color: none;
+    scrollbar-Highlight-Color: #ddd;
+    scrollbar-Shadow-Color: #ddd;
+}
+/* Chrome, Safari용 스크롤 바 */
+::-webkit-scrollbar{width: 5px;}
+::-webkit-scrollbar-track{background: #eeeeee; border-radius: 5px;}
+::-webkit-scrollbar-thumb{background: #ddd; border-radius: 2.5px;}
